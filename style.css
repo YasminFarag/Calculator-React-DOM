@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inpt {
+    width: 100%;
+    font-size: 2rem;
+    padding: 0.5rem;
+    background-color: rgb(41,41,56);
+    color: white;
+
+}
+
+.buttons{
+    display: flex;
+    flex-wrap: wrap;
+    transition: all 0.5s linear;
+
+}
+
+button {
+    flex: 0 0 25%;
+    padding: 0.25rem 0;
+    transition: all 2s ease;
+}
+
+button:hover{
+    background-color: cadetblue
+}
