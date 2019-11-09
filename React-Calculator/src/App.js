@@ -33,7 +33,7 @@ export default class App extends Component {
 
   backSpace=() => {
     this.setState({
-      result: this.state.result.slice(0,1)
+      result: this.state.result.slice(0,-1)
     });
 
   }
