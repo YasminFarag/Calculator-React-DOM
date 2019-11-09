@@ -31,12 +31,27 @@ export default class App extends Component {
         })
   }
 
+  backSpace=() => {
+    this.setState({
+      result: this.state.result.slice(0,1)
+    });
+
+  }
+
   onClick = (button) => {
         if (button === 'C') {
           this.reset()
-        } else if (button === '=') {
+        } 
+        
+          else if (button === '=') {
           this.calculate()
-        } else {
+        } 
+            else if(button === 'CE'){
+            this.backSpace()
+
+      }
+        
+        else {
           this.setState({
             result: this.state.result + button
           })
