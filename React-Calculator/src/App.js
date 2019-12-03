@@ -55,7 +55,7 @@ export default class App extends Component {
 
   handleKeyPress =(e) => {
     if(e.key === 'Enter'){
-      this.reset()
+      this.backSpace()
     
       
     }
