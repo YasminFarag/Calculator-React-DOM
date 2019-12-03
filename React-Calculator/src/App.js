@@ -41,7 +41,7 @@ export default class App extends Component {
   onClick = (button) => {
     if (button === 'C') {
       this.reset()
-    } else if (button === '=' || button === 'Enter') {
+    } else if (button === '=') {
       this.calculate()
     } else if (button === 'CE') {
       this.backSpace()
@@ -52,6 +52,15 @@ export default class App extends Component {
       })
     }
   }
+
+  handleKeyPress =(e) => {
+    if(e.key === 'Enter'){
+      this.reset()
+    
+      
+    }
+
+  }
   render() {
     return (
        <div>
@@ -61,7 +70,8 @@ export default class App extends Component {
       }
       result = {
         this.state.result
-      } /> 
+      } 
+      onKeyPress={this.handleKeyPress} /> 
       </div >
     )
   }

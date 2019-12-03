@@ -8,17 +8,17 @@ export default class Screen extends Component {
         let { result } = this.props
         return (
             <section className="calculator">
-                <p
+                <p  
                     className="inpt"
                     type="text">
                     {result}</p>
 
 
                 <div className="buttons">
-                    <button onClick={(e) => this.props.onClick(e.target.name)} type="button" className="btn-orange" name="*">*</button>
-                    <button onClick={(e) => this.props.onClick(e.target.name)} type="button" className="btn-orange" name="/">/</button>
-                    <button onClick={(e) => this.props.onClick(e.target.name)} type="button" className="btn-orange" name="-">-</button>
-                    <button onClick={(e) => this.props.onClick(e.target.name)} type="button" className="btn-orange" name="+">+</button>
+                    <button onClick={(e) => this.props.onClick(e.target.name)} onKeyPress={this.props.onKeyPress} type="button" className="btn-orange" name="*">*</button>
+                    <button onClick={(e) => this.props.onClick(e.target.name)}  onKeyPress={this.props.onKeyPress} type="button" className="btn-orange" name="/">/</button>
+                    <button onClick={(e) => this.props.onClick(e.target.name)} onKeyPress={this.props.onKeyPress}  type="button" className="btn-orange" name="-">-</button>
+                    <button onClick={(e) => this.props.onClick(e.target.name)} onKeyPress={this.props.onKeyPress} type="button" className="btn-orange" name="+">+</button>
                     {/* grey buttons */}
                     <button onClick={(e) => this.props.onClick(e.target.name)} type="button" className="btn-grey" name=".">.</button>
                     <button onClick={(e) => this.props.onClick(e.target.name)} type="button" className="btn-grey" name="9">9</button>
